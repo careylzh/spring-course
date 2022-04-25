@@ -1,14 +1,21 @@
 package com.spring28minutescourse.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
+
+    @Autowired
     private SortingAlgo sortingAlgo;
+
     public BinarySearchImpl(SortingAlgo sortingAlgo) {
         super();
         this.sortingAlgo = sortingAlgo;
     }
 
 
-    public int binarySearch(int[] numbers, int numberToSearchFor){
+    public int binarySearch(int[] numbers, int numberToSearchFor) {
         //Implement the sorting algo here, which should be a variable dependency of binary search
 
 
