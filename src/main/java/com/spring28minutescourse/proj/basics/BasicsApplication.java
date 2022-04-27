@@ -1,14 +1,14 @@
-package com.spring28minutescourse.demo;
+package com.spring28minutescourse.proj.basics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BasicsApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicsApplication.class, args);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         BinarySearchImpl binarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
         System.out.println(binarySearch);

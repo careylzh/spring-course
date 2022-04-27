@@ -1,4 +1,4 @@
-package com.spring28minutescourse.demo;
+package com.spring28minutescourse.proj.basics;
 
 import org.springframework.stereotype.Component;
 
