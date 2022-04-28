@@ -1,5 +1,6 @@
-package com.spring28minutescourse.proj.basics;
+package com.spring28minutescourse.proj;
 
+import com.spring28minutescourse.proj.basics.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
