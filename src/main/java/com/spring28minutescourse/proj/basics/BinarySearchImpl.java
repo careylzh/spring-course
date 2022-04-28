@@ -30,4 +30,5 @@ public class BinarySearchImpl {
         //Return the result(index of the target element)
         return 3; //for now
     }
+    
 }
