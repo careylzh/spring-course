@@ -5,8 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.spring28minutescourse.proj.basics")
 public class advScopeApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(advScopeApplication.class);
