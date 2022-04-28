@@ -1,21 +1,24 @@
 package com.spring28minutescourse.proj.advBeanScope;
 
-import com.spring28minutescourse.proj.advScopeApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 //DAO: data access object
-@Component
+//@Component
+@Named
 public class PersonDAO {
 
     private Logger LOGGER = LoggerFactory.getLogger(PersonDAO.class);
 
-    @Autowired
+    //    @Autowired
+    @Inject
     JdbcConnection jdbcConnection;     //dummy jdbc, not the actual jdbc database stuff
 
     public JdbcConnection getJdbcConnection() {
