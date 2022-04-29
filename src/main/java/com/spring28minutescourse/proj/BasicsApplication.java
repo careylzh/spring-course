@@ -1,15 +1,18 @@
 package com.spring28minutescourse.proj;
 
 import com.spring28minutescourse.proj.basics.BinarySearchImpl;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan
 public class BasicsApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(BasicsApplication.class, args);
+        ConfigurableApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasicsApplication.class);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         BinarySearchImpl binarySearch2 = applicationContext.getBean(BinarySearchImpl.class);
         System.out.println(binarySearch);
@@ -18,6 +21,9 @@ public class BasicsApplication {
 
         int result = binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
         System.out.println(result);
+
+        applicationContext.close();
+
     }
 
 }
